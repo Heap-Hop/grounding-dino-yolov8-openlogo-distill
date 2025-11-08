@@ -1,0 +1,20 @@
+[project]
+name = "grounding-dino-yolov8-openlogo-distill"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "addict>=2.4.0",
+    "numpy<2",
+    "opencv-python>=4.11.0.86",
+    "pycocotools>=2.0.10",
+    "supervision>=0.26.1",
+    "timm>=1.0.22",
+    "torch>=2.9.0",
+    "torchaudio>=2.9.0",
+    "torchvision>=0.24.0",
+    "transformers>=4.57.1",
+    "ultralytics>=8.3.226",
+    "yapf>=0.43.0",
+]
