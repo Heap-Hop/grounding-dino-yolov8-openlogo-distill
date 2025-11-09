@@ -88,3 +88,11 @@ uv run scripts/train.py --supervisor
 ```bash
 uv run scripts/train.py --gdino_distill
 ```
+
+### Convert to tflite
+
+```bash
+uv add "onnx>=1.14.0"
+
+uv run scripts/convert_tflite.py -m ${PATH_TO_PT_MODEL}
+```
