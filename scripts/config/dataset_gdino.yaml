@@ -1,0 +1,6 @@
+path: dataset/gdino_distill  # relative to project root
+train: images/train
+val: images/val
+
+nc: 1
+names: ['logo']

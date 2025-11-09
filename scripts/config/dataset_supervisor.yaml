@@ -1,0 +1,6 @@
+path: dataset/openlogo_yolo # relative to project root
+train: images/train
+val: images/val
+
+nc: 1
+names: ['logo']
