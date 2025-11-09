@@ -14,7 +14,6 @@ class CameraInferenceController extends ChangeNotifier {
   double _currentFps = 0.0;
   int _frameCount = 0;
   DateTime _lastFpsUpdate = DateTime.now();
-  bool _isPaused = false;
 
   // Threshold state
   double _confidenceThreshold = 0.3;
@@ -56,7 +55,6 @@ class CameraInferenceController extends ChangeNotifier {
   double get currentZoomLevel => _currentZoomLevel;
   bool get isFrontCamera => _isFrontCamera;
   YOLOViewController get yoloController => _yoloController;
-  bool get isPaused => _isPaused;
 
   CameraInferenceController() {
     _modelManager = ModelManager(
@@ -69,18 +67,6 @@ class CameraInferenceController extends ChangeNotifier {
         notifyListeners();
       },
     );
-  }
-
-  void togglePause() {
-    if (_isDisposed) return;
-
-    _isPaused = !_isPaused;
-    if (_isPaused) {
-      _yoloController.stop();
-    } else {
-      _yoloController.captureFrame();
-    }
-    notifyListeners();
   }
 
   /// Initialize the controller

@@ -8,15 +8,15 @@ plugins {
 android {
     namespace = "com.ultralytics.yolo_example"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.13846066"
+    ndkVersion = "28.0.13004108"
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString() // Use toString() for jvmTarget
+        jvmTarget = JavaVersion.VERSION_21.toString() // Use toString() for jvmTarget
     }
 
     defaultConfig {

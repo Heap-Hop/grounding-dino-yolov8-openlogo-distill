@@ -84,10 +84,6 @@ class _CameraInferenceScreenState extends State<CameraInferenceScreen> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _controller.togglePause,
-        child: Icon(_controller.isPaused ? Icons.play_arrow : Icons.pause),
-      ),
     );
   }
 
