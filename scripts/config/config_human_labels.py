@@ -4,13 +4,13 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 TRAIN_CONFIG = {
     "model": "yolov8n.pt",
-    "data": str(Path(__file__).parent / "dataset_supervisor.yaml"), 
+    "data": str(Path(__file__).parent / "dataset_human.yaml"), 
     "epochs": 32,
     "imgsz": 640,
     "batch": 16,
     "workers": 8,
     "device": 0,
-    "project": str(PROJECT_ROOT / "output-yolov8-openlogo-supervisor"),
+    "project": str(PROJECT_ROOT / "output-yolov8-openlogo-human"),
     "name": "logo_detection",
     "patience": 20,
     "save": True,

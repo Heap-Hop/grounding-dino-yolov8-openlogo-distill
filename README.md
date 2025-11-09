@@ -80,7 +80,7 @@ ln -s "$(pwd)/dataset/openlogo_yolo/images" dataset/gdino_distill/
 ### Train YOLOv8 with original labels
 
 ```bash
-uv run scripts/train.py --supervisor
+uv run scripts/train.py --human_labels
 ```
 
 ### Train YOLOv8 with distilled labels

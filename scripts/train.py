@@ -22,15 +22,15 @@ def train(config):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train YOLO model with specified config.")
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--supervisor", action="store_true", help="Training in supervisor mode, use origin openlog dataset")
+    group.add_argument("--human_labels", action="store_true", help="Training in human_labels mode, use origin openlog dataset")
     group.add_argument("--gdino_distill", action="store_true", help="Training in gdino distill mode, use gdino distilled openlogo dataset")
     args = parser.parse_args()
 
-    if args.supervisor:
-        from config.config_supervisor import TRAIN_CONFIG
+    if args.human_labels:
+        from config.config_human_labels import TRAIN_CONFIG
         train(TRAIN_CONFIG)
     elif args.gdino_distill:
-        from config.config_gdino import TRAIN_CONFIG
+        from config.config_gdino_labels import TRAIN_CONFIG
         train(TRAIN_CONFIG)
     else:
-        print("Please specify a valid training mode: '--supervisor' or '--gdino_distill'.")
+        print("Please specify a valid training mode: '--human_labels' or '--gdino_distill'.")
