@@ -7,7 +7,13 @@ uv run scripts/data_converter.py -s dataset/openlogo -o dataset/openlogo_yolo
 ```
 
 #### Download GroundingDINO weights
-TODO
+
+[Grounding DINO SwinB Release](https://github.com/IDEA-Research/GroundingDINO/releases/tag/v0.1.0-alpha2)
+
+```
+mkdir -p GroundingDINO/weights
+wget -P GroundingDINO/weights https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth
+```
 
 #### Generate Pseudo-Labels using GroundingDINO
 
@@ -95,4 +101,17 @@ uv run scripts/train.py --gdino_distill
 uv add "onnx>=1.14.0"
 
 uv run scripts/convert_tflite.py -m ${PATH_TO_PT_MODEL}
+```
+
+### Flutter App
+Put the two tflite models in `flutter_app/android/app/src/main/assets/` folder and set the file names as below:
+```
+ls flutter_app/android/app/src/main/assets/ 
+dino-labels-yolov8.tflite  human-labels-yolov8.tflite
+```
+
+Run the flutter app
+```
+cd flutter_app
+flutter run -d <device_id>
 ```
