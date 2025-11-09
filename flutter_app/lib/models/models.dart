@@ -3,8 +3,8 @@
 import 'package:ultralytics_yolo/models/yolo_task.dart';
 
 enum ModelType {
-  yolo('yolo', YOLOTask.detect),
-  dinoYolo('dino-yolo', YOLOTask.detect);
+  humanLabels('human-labels-yolov8', YOLOTask.detect),
+  dinoLabels('dino-labels-yolov8', YOLOTask.detect);
   // detect('yolo11n', YOLOTask.detect),
   // segment('yolo11n-seg', YOLOTask.segment),
   // classify('yolo11n-cls', YOLOTask.classify),
